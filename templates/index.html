@@ -1,0 +1,671 @@
+<html>
+    <head>
+        <title>Life Insurance Application Assesment</title>
+    </head>
+
+    <body>
+        <H1>Welcome to Automatic Life Insurance Application Assesment</H1>
+        
+        <b>Note</b><br> 
+        
+        <div>The model used in the prediction is created based on the data from the Kaggle competetion "Prudential Life Insurance Assesment". The data is available <a href="https://www.kaggle.com/c/prudential-life-insurance-assessment">here.</a></div>
+        <br> 
+            <form action="/result" method="POST">
+            <div>
+                Product_Info_1[1 to 2]
+                <input name="product_info_1" id="product_info_1" type="text">
+            </div>
+            <div>
+                Product_Info_2
+            <select name="product_info_2" id="product_info_2" >
+                <option value="a1">A1</option>
+                <option value="a2">A2</option>
+                <option value="a3">A3</option>
+                <option value="a4">A4</option>
+                <option value="a5">A5</option>
+                <option value="a6">A6</option>
+                <option value="a7">A7</option>
+                <option value="a8">A8</option>
+                <option value="b1">B1</option>
+                <option value="b2">B2</option>
+                <option value="c1">C1</option>
+                <option value="c2">C2</option>
+                <option value="c3">C3</option>
+                <option value="c4">C4</option>
+                <option value="d1">D1</option>
+                <option value="d2">D2</option>
+                <option value="d3">D3</option>
+                <option value="d4">D4</option>
+                <option value="e1">E1</option>
+            </select>
+            </div>
+            <div>
+                Product_Info_3[1 to 38]
+                <input name="product_info_3" id="product_info_3"  type="text">
+            </div>
+            <div>
+                Product_Info_4[0 to 1]
+                <input name="product_info_4" id="product_info_4"  type="text">
+            </div>
+            <div>
+                Product_Info_5[2 to 3]
+                <input name="product_info_5" id="product_info_5" type="text">
+            </div>
+            <div>
+                Product_Info_6[1 to 3]
+                <input type="text" name="product_info_6" id="product_info_6">
+            </div>
+            <div> 
+                Product_Info_7[1 to 3]
+                <input type="text" name="product_info_7" id="product_info_7">
+            </div>
+            <div>
+                Age[0 to 1]
+                <input type="text" name="ins_age" id="ins_age">
+            </div>
+            <div>
+                Height[0 to 1]
+                <input name="ht" type="text" id="ht">
+            </div>
+            <div>
+                Weight[0 to 1]
+                <input name="wt" type="text" id="wt">
+            </div>
+            <div>
+                BMI[0 to 1]
+                <input name="bmi" type="text" id="bmi">
+            </div>
+            <div>
+                Employment_Info_1[0 to 1]
+                <input type="text" name="employment_info_1" id="employment_info_1">
+            </div>
+            <div>
+                Employment_Info_2[1 to 38]
+                <input type="text" name="employment_info_2" id="employment_info_2">
+            </div>
+            <div>
+                Employment_Info_3[1 to 3]
+            <input type="text" name="employment_info_3" id="employment_info_3">
+            </div>
+            <div>
+                Employment_Info_4[0 to 1]
+                <input type="text" name="employment_info_4" id="employment_info_4">
+            </div>
+            <div>
+                Employment_Info_5[2 to 3]
+                <input type="text" name="employment_info_5" id="employment_info_5">
+            </div>
+            <div>
+                Employment_Info_6[0 to 1]
+            <input type="text" name="employment_info_6" id="employment_info_6">
+            </div>
+            <div>
+                InsuredInfo_1[1 to 3]
+                <input type="text" name="insuredInfo_1" id="insuredInfo_1">
+            </div>
+            <div>
+                InsuredInfo_2[2 to 3]
+                <input type="text" name="insuredInfo_2" id="insuredInfo_2">
+            </div>
+            <div>
+                InsuredInfo_3[1 to 11]
+                <input type="text" name="insuredInfo_3" id="insuredInfo_3">
+            </div>
+            <div>
+                InsuredInfo_4[2 to 3]
+                <input type="text" name="insuredInfo_4" id="insuredInfo_4"> 
+            </div>
+            <div>
+                InsuredInfo_5[1 to 3]
+                <input type="text" name="insuredInfo_5" id="insuredInfo_5">
+            </div>
+            <div>
+                InsuredInfo_6[1 to 2]
+                <input type="text" name="insuredInfo_6" id="insuredInfo_6">
+            </div>
+            <div>
+                InsuredInfo_7[1 to 3]
+                <input type="text" name="insuredInfo_7" id="insuredInfo_7">
+            </div>
+            <div>
+                Insurance_History_1[1 to 2]
+                <input type="text" name="insurance_history_1" id="insurance_history_1"> 
+            </div>
+            <div>
+                Insurance_History_2[1 to 3]
+                <input type="text" name="insurance_history_2" id="insurance_history_2">
+            </div>
+            <div>
+                Insurance_History_3[1 to 3]
+                <input type="text" name="insurance_history_3" id="insurance_history_3">
+            </div>
+            <div>
+                Insurance_History_4[1 to 3]
+                <input type="text" name="insurance_history_4" id="insurance_history_4">
+            </div>
+            <div>
+                Insurance_History_5[0 to 1] 
+                <input type="text" name="insurance_history_5" id="insurance_history_5">
+            </div>        
+            <div>
+                Insurance_History_6[0 to 1]
+                <input name="insurance_history_6" type="text" id="insurance_history_6">
+            </div>
+            <div>
+                Insurance_History_7[1 to 3]
+                <input type="text" name="insurance_history_7" id="insurance_history_7">
+            </div>
+            <div>
+                Insurance_History_8[1 to 3]
+                <input type="text" name="insurance_history_8" id="insurance_history_8">
+            </div>
+            <div>
+                Insurance_History_9[1 to 3]
+                <input type="text" name="insurance_history_9" id="insurance_history_9">
+            </div>
+            <div>
+                Family_Hist_1[1 to 3]
+                <input type="text" name="family_hist_1" id="family_hist_1">
+            </div>
+            <div>
+                Family_Hist_2[0 to 1]
+            <input type="text" name="family_hist_2" id="family_hist_2">
+            </div>
+            <div>
+                Family_Hist_3[0 to 1]
+                <input type="text" name="family_hist_3" id="family_hist_3">
+            </div>
+            <div>
+                Family_Hist_4[0 to 1]
+                <input type="text" name="family_hist_4" id="family_hist_4">
+            </div>
+            <div>
+                Family_Hist_5[0 to 1]
+            <input type="text" name="family_hist_5" id="family_hist_5">
+            </div>
+            <div>
+                Medical_History_1[0 to 240]
+                <input type="text" name="medical_history_1" id="medical_history_1"> 
+            </div>
+            <div>
+                Medical_History_2[1 to 650]
+                <input type="text" name="medical_history_2" id="medical_history_2">
+            </div>
+            <div>
+                Medical_History_3[1 to 3]
+                <input type="text" name="medical_history_3" id="medical_history_3">
+            </div>
+            <div>
+                Medical_History_4[1 to 2]
+                <input type="text" name="medical_history_4" id="medical_history_4">
+            </div>
+            <div>
+                Medical_History_5[1 to 3]
+                <input type="text" name="medical_history_5" id="medical_history_5">
+            </div>
+            <div>
+                Medical_History_6[1 to 3]
+                <input type="text" name="medical_history_6" id="medical_history_6">
+            </div>
+            <div>
+                Medical_History_7[1 to 3]
+                <input type="text" name="medical_history_7" id="medical_history_7">
+            </div>
+            <div>
+                Medical_History_8[1 to 3]
+                <input type="text" name="medical_history_8" id="medical_history_8">
+            </div>
+            <div> 
+                Medical_History_9[1 to 3]
+                <input type="text" name="medical_history_9" id="medical_history_9">
+            </div>
+            <div>
+                Medical_History_10[0 to 240]
+                <input type="text" name="medical_history_10" id="medical_history_10">
+            </div>
+            <div>
+                Medical_History_11[1 to 3]
+                <input type="text" name="medical_history_11" id="medical_history_11">
+            </div>
+            <div>
+                Medical_History_12[1 to 3]
+                <input type="text" name="medical_history_12" id="medical_history_12">
+            </div>
+            <div>
+                Medical_History_13[1 to 3]
+                <input type="text" name="medical_history_13" id="medical_history_13">
+            </div>
+            <div>
+                Medical_History_14[1 to 3]
+                <input type="text" name="medical_history_14" id="medical_history_14">
+            </div>
+            <div>
+                Medical_History_15[0 to 240]
+                <input type="text" name="medical_history_15" id="medical_history_15">
+            </div>
+            <div>
+                Medical_History_16[1 to 3]
+                <input type="text" name="medical_history_16" id="medical_history_16">
+            </div>
+            <div>
+                Medical_History_17[1 to 3]
+                <input type="text" name="medical_history_17" id="medical_history_17">
+            </div>
+            <div>
+                Medical_History_18[1 to 3]
+                <input type="text" name="medical_history_18" id="medical_history_18">
+            </div>
+            <div>
+                Medical_History_19[1 to 3]
+                <input type="text" name="medical_history_19" id="medical_history_19">
+            </div>
+            <div>
+                Medical_History_20[1 to 3]
+                <input type="text" name="medical_history_20" id="medical_history_20">
+            </div>
+            <div>
+                Medical_History_21[1 to 3]
+                <input type="text" name="medical_history_21" id="medical_history_21">
+            </div>
+            <div>
+                Medical_History_22[1 to 2]
+                <input type="text" name="medical_history_22" id="medical_history_22">
+            </div>
+            <div>
+                Medical_History_23[1 to 3]
+                <input type="text" name="medical_history_23" id="medical_history_23">
+            </div>
+            <div>
+                Medical_History_24[0 to 240]
+                <input type="text" name="medical_history_24" id="medical_history_24">
+            </div>
+            <div>
+                Medical_History_25[1 to 3]
+                <input type="text" name="medical_history_25" id="medical_history_25">
+            </div>
+            <div>
+                Medical_History_26[1 to 3]
+            <input type="text" name="medical_history_26" id="medical_history_26">
+            </div>
+            <div>
+                Medical_History_27[1 to 3]
+            <input type="text" name="medical_history_27" id="medical_history_27">
+            </div>
+            <div>
+                Medical_History_28[1 to 3]
+                <input type="text" name="medical_history_28" id="medical_history_28">
+            </div>
+            <div>
+                Medical_History_29[1 to 3]
+            <input type="text" name="medical_history_29" id="medical_history_29">
+            </div>
+            <div>
+                Medical_History_30[1 to 3]
+            <input type="text" name="medical_history_30" id="medical_history_30">
+            </div>
+            <div>
+                Medical_History_31[1 to 3]
+            <input type="text" name="medical_history_31" id="medical_history_31">
+            </div>
+            <div>
+                Medical_History_32[0 to 240]
+            <input type="text" name="medical_history_32" id="medical_history_32">
+            </div>
+            <div>
+                Medical_History_33[1 to 3]
+            <input type="text" name="medical_history_33" id="medical_history_33">
+            </div>
+            <div>
+                Medical_History_34[1 to 3]
+            <input type="text" name="medical_history_34" id="medical_history_34">
+            </div>
+            <div>
+                Medical_History_35[1 to 3]
+            <input type="text" name="medical_history_35" id="medical_history_35">
+            </div>
+            <div>
+                Medical_History_36[1 to 3]
+            <input type="text" name="medical_history_36" id="medical_history_36">
+            </div>
+            <div>
+                Medical_History_37[1 to 3]
+            <input type="text" name="medical_history_37" id="medical_history_37">
+            </div>
+            <div>
+                Medical_History_38[1 to 2]
+            <input type="text" name="medical_history_38" id="medical_history_38">
+            </div>
+            <div>
+                Medical_History_39[1 to 3]
+            <input type="text" name="medical_history_39" id="medical_history_39">
+            </div>
+            <div>
+                Medical_History_40[1 to 3]
+            <input type="text" name="medical_history_40" id="medical_history_40">
+            </div>
+            <div>
+                Medical_History_41[1 to 3]
+            <input type="text" name="medical_history_41" id="medical_history_41">
+            </div>
+            <div>
+                Medical_Keyword_1
+            <select name="medical_keyword_1" id="medical_keyword_1">
+                <option value=0>0</option>
+                <option value=1>1</option>
+            </select>
+            </div>
+            <div>
+                Medical_Keyword_2
+            <select name="medical_keyword_2" id="medical_keyword_2">
+                <option value=0>0</option>
+                <option value=1>1</option>
+            </select>
+            </div>
+            <div>
+                Medical_Keyword_3
+                <select name="medical_keyword_3" id="medical_keyword_3">
+                    <option value=0>0</option>
+                    <option value=1>1</option>
+                </select>
+            </div>
+            <div>
+                Medical_Keyword_4
+                <select name="medical_keyword_4" id="medical_keyword_4">
+                    <option value=0>0</option>
+                    <option value=1>1</option>
+                </select>            
+            </div>
+            <div>
+                Medical_Keyword_5
+                <select name="medical_keyword_5" id="medical_keyword_5">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>          
+            </div>
+            <div>
+                Medical_Keyword_6
+                <select name="medical_keyword_6" id="medical_keyword_6">
+                    <option value=0>0</option>
+                    <option value=1>1</option>
+                </select>
+            </div>
+            <div>
+                Medical_Keyword_7
+                <select name="medical_keyword_7" id="medical_keyword_7">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>          
+            </div>
+            <div>
+                Medical_Keyword_8
+                <select name="medical_keyword_8" id="medical_keyword_8">
+                    <option value=0>0</option>
+                    <option value=1>1</option>
+                </select>            
+            </div>
+            <div>
+                Medical_Keyword_9
+                <select name="medical_keyword_9" id="medical_keyword_9">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>          
+            </div>
+            <div>
+                Medical_Keyword_10
+                <select name="medical_keyword_10" id="medical_keyword_10">
+                    <option value=0>0</option>
+                    <option value=1>1</option> 
+                </select>           
+            </div>
+            <div>
+                Medical_Keyword_11
+                <select name="medical_keyword_11" id="medical_keyword_11">
+                    <option value=0>0</option>
+                    <option value=1>1</option>
+                </select>            
+            </div>
+            <div>
+                Medical_Keyword_12
+                <select name="medical_keyword_12" id="medical_keyword_12">
+                    <option value=0>0</option>
+                    <option value=1>1</option> 
+                </select>           
+            </div>
+            <div>
+                Medical_Keyword_13
+                <select name="medical_keyword_13" id="medical_keyword_13">
+                    <option value=0>0</option>
+                    <option value=1>1</option> 
+                </select>           
+            </div>
+            <div>
+                Medical_Keyword_14
+                <select name="medical_keyword_14" id="medical_keyword_14">
+                    <option value=0>0</option>
+                    <option value=1>1</option> 
+                </select>           
+            </div>
+            <div>
+                Medical_Keyword_15
+                <select name="medical_keyword_15" id="medical_keyword_15">
+                    <option value=0>0</option>
+                    <option value=1>1</option>
+                </select>            
+            </div>
+            <div>
+                Medical_Keyword_16
+                <select name="medical_keyword_16" id="medical_keyword_16">
+                    <option value=0>0</option>
+                    <option value=1>1</option> 
+                </select>           
+            </div>
+            <div>
+                Medical_Keyword_17
+                <select name="medical_keyword_17" id="medical_keyword_17">
+                    <option value=0>0</option>
+                    <option value=1>1</option> 
+                </select>           
+            </div>
+            <div>
+                Medical_Keyword_18
+                <select name="medical_keyword_18" id="medical_keyword_18">
+                    <option value=0>0</option>
+                    <option value=1>1</option>
+                    </select>            
+            </div>
+            <div>
+                Medical_Keyword_19
+                <select name="medical_keyword_19" id="medical_keyword_19">
+                    <option value=0>0</option>
+                    <option value=1>1</option>
+                </select>            
+            </div>
+            <div>
+                Medical_Keyword_20
+                <select name="medical_keyword_20" id="medical_keyword_20">
+                    <option value=0>0</option>
+                    <option value=1>1</option> 
+                </select>           
+            </div>
+            <div>
+                Medical_Keyword_21 
+                <select name="medical_keyword_21" id="medical_keyword_21">
+                    <option value=0>0</option>
+                    <option value=1>1</option>   
+                </select>         
+            </div>
+            <div>
+                Medical_Keyword_22
+                <select name="medical_keyword_22" id="medical_keyword_22">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>          
+            </div>
+            <div>
+                Medical_Keyword_23
+                <select name="medical_keyword_23" id="medical_keyword_23">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>          
+            </div>
+            <div>
+                Medical_Keyword_24
+                <select name="medical_keyword_24" id="medical_keyword_24">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            
+            </div>
+            <div>
+                Medical_Keyword_25
+                <select name="medical_keyword_25" id="medical_keyword_25">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            
+            </div>
+            <div>
+                Medical_Keyword_26
+                <select name="medical_keyword_26" id="medical_keyword_26">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            
+            </div>
+            <div>
+                Medical_Keyword_27
+                <select name="medical_keyword_27" id="medical_keyword_27">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            
+            </div>
+            <div>
+                Medical_Keyword_28
+                <select name="medical_keyword_28" id="medical_keyword_28">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            
+            </div>
+            <div>
+                Medical_Keyword_29
+                <select name="medical_keyword_29" id="medical_keyword_29">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            
+            </div>
+            <div>
+                Medical_Keyword_30
+                <select name="medical_keyword_30" id="medical_keyword_30">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            </div>
+            <div>
+                Medical_Keyword_31
+                <select name="medical_keyword_31" id="medical_keyword_31">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            </div>
+            <div>
+                Medical_Keyword_32
+                <select name="medical_keyword_32" id="medical_keyword_32">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            </div>
+            <div>
+                Medical_Keyword_33
+                <select name="medical_keyword_33" id="medical_keyword_33">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            </div>
+            <div>
+                Medical_Keyword_34
+                <select name="medical_keyword_34" id="medical_keyword_34">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            </div>
+            <div>
+                Medical_Keyword_35
+                <select name="medical_keyword_35" id="medical_keyword_35">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            </div>
+            <div>
+                Medical_Keyword_36
+                <select name="medical_keyword_36" id="medical_keyword_36">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            </div>
+            <div>
+                Medical_Keyword_37
+                <select name="medical_keyword_37" id="medical_keyword_37">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            </div>
+            <div>
+                Medical_Keyword_38
+                <select name="medical_keyword_38" id="medical_keyword_38">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            </div>
+            <div>
+                Medical_Keyword_39
+                <select name="medical_keyword_39" id="medical_keyword_39">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            </div>
+            <div>
+                Medical_Keyword_40
+                <select name="medical_keyword_40" id="medical_keyword_40">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            </div>
+            <div>
+                Medical_Keyword_41
+                <select name="medical_keyword_41" id="medical_keyword_41">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            </div>
+            <div>
+                Medical_Keyword_42
+                <select name="medical_keyword_42" id="medical_keyword_42">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            </div>
+            <div>
+                Medical_Keyword_43
+                <select name="medical_keyword_43" id="medical_keyword_43">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            </div>
+            <div>
+                Medical_Keyword_44
+                <select name="medical_keyword_44" id="medical_keyword_44">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            </div>
+            <div>
+                Medical_Keyword_45
+                <select name="medical_keyword_45" id="medical_keyword_45">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            </div>
+            <div>
+                Medical_Keyword_46
+                <select name="medical_keyword_46" id="medical_keyword_46">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            </div>
+            <div>
+                Medical_Keyword_47
+                <select name="medical_keyword_47" id="medical_keyword_47">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            </div>
+            <div>
+                Medical_Keyword_48
+                <select name="medical_keyword_48" id="medical_keyword_48">
+                    <option value=0>0</option>
+                    <option value=1>1</option>  
+                </select>            </div>
+            <br>
+            <button>Submit</button>
+        </form>
+    </body>
+</html>
