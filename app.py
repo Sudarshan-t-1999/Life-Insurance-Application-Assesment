@@ -4,14 +4,16 @@ import joblib
 
 app= Flask(__name__)
 
-# Rendering the welcome page from where the 
+# Rendering the welcome page from where the data will entered 
 @app.route('/')
 def welcome():
     return render_template('index.html')
 
+# taking the inputs from the html page and using them to run the model to predict the response
 @app.route('/result', methods=['POST', 'GET'])
 def result():
     if request.method == 'POST':
+        # the values from the form are stored as key-value pairs in a dictionary
         data_dict = {
         'Product_Info_1':[float(request.form['product_info_1'])],
         'Product_Info_2':[request.form.get('product_info_2')],
@@ -139,11 +141,16 @@ def result():
         'Medical_Keyword_46':[float(request.form['medical_keyword_46'])],
         'Medical_Keyword_47':[float(request.form['medical_keyword_47'])],
         'Medical_Keyword_48':[float(request.form['medical_keyword_48'])]
-    }
+        }
+
+        # the dictionary is converted into a dataframe which can be given as input to the model
         data= pd.DataFrame(data_dict)
 
+        # the joblib file is loaded 
         file= joblib.load('final_model.joblib')
         
+        # the file contains the model as well as other information required to run the model which are 
+        # extracted from it
         model= file['model']
         numeric_cols= file['numeric_cols']
         categorical_cols= file['categorical_cols']
@@ -152,12 +159,16 @@ def result():
         encoder= file['encoder']
         scaler= file['scaler']
 
+        # the input data is processed before being fed to the model
         data[numeric_cols]= imputer.transform(data[numeric_cols])
         data[encoded_cols]= encoder.transform(data[categorical_cols])
         data[numeric_cols]= scaler.transform(data[numeric_cols])
         X_input= data[numeric_cols + encoded_cols]
+        
+        # the model is run to predict the response
         preds= model.predict(X_input)
 
+        # this command renders a new page which displays the result
         return render_template('result.html', preds=preds[0])
         
 if __name__ == '__main__':
